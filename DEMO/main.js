@@ -1,5 +1,25 @@
-var div1 = document.querySelector('div:first-child ul');
-div1.innerHTML = '<li>abc</li> <li>abc</li> <li>abc</li>';
+var course = {
+    name: 'Javascript',
+    coin: 250
+}
 
-var div2 = document.querySelector('div:last-child');
-div2.innerHTML = '<h1>abc</h1>'
+var student = {
+    name: 'Vũ',
+    age: 18
+}
+
+student.sayHello = function (value) {
+    console.log(value)
+}
+
+// student.sayHello('Mèo méo meo');
+
+function meo(value) {
+    if(value.trim()){
+        return undefined
+    } else {
+        return 'Vui lòng nhập trường này'
+    }
+}
+
+console.log(meo(' '));
