@@ -46,39 +46,40 @@ function Validator(options) {
 // Nguyên tắc của các rule:
 // 1. Khi có lỗi => Trả ra message lỗi
 // 2. Khi hợp lệ => Không trả ra cái gì cả (undefined)
-Validator.isRequired = function(selector) {
+Validator.isRequired = function(selector, message) {
     return {
         selector: selector,
         test: function (value) {
-            return value.trim() ? undefined : 'Vui lòng nhập trường này'
+            return value.trim() ? undefined : message || 'Vui lòng nhập trường này'
         }
     };
 }
 
-Validator.isEmail = function(selector) {
+Validator.isEmail = function(selector, message) {
     return {
         selector: selector,
         test: function(value) {
             var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            return regex.test(value) ? undefined : 'Trường này phải là email';
+            
+            return regex.test(value) ? undefined : message || 'Trường này phải là email';
         }
     };
 }
 
-Validator.minLength = function(selector, min) {
+Validator.minLength = function(selector, min, message) {
     return {
         selector: selector,
         test: function(value) {
-           return value.length >= min ? undefined : `Vui lòng nhập tối thiểu ${min} ký tự`
+           return value.length >= min ? undefined : message || `Vui lòng nhập tối thiểu ${min} ký tự`
         }
     };
 }
 
-Validator.isConfirmed = function(selector, getConfirmValue) {
+Validator.isConfirmed = function(selector, getConfirmValue, message) {
     return {
         selector: selector,
         test: function(value) {
-           return value === getConfirmValue() ? undefined : 'Giá trị nhập vào không chính xác'
+           return value === getConfirmValue() ? undefined : message || 'Giá trị nhập vào không chính xác'
         }
     };
 }
