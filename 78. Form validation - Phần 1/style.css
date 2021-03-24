@@ -104,4 +104,18 @@
   .spacer {
     margin-top: 36px;
   }
+
+  .radio-form {
+    display: flex;
+  }
   
+  .radio-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .radio-item label {
+    margin-left: 5px;
+    font-size: 14px;
+  }
