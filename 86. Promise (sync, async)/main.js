@@ -18,15 +18,22 @@
 
 // Sync / Async
 
-// setTimeout, setInterval, fetch, 
-// XMLHttpRequest, file reading,
-// request animation frame
+// Sync: Đồng bộ là viết trước chạy trước, viết sau chạy sau
+// Ví dụ: 
+console.log(1);
+console.log(2);
 
-// Call back
 
-// sleep
+// Async: Bất đồng bộ là viết trước nhưng lại in ra sau
+// Ví dụ:
 setTimeout(function() {
     console.log(1);
 }, 1000)
 
 console.log(2);
+
+
+// Một ví dụ về Async:
+
+// setTimeout, setInterval, fetch, XMLHttpRequest, file reading,
+// request animation frame
