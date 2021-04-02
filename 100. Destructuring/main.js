@@ -84,3 +84,10 @@ console.log(description); // default description
 
 // Nếu description đã được đinh nghĩa
 console.log(description); // description value
+
+// Sử dụng rest để định nghĩa tham số
+function logger(...params) { //rest
+    console.log(params)
+}
+
+console.log(1, 2, 3, 4, 5, 6, 7, 8);
