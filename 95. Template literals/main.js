@@ -1,5 +1,5 @@
 
-// 1. Let, const
+// 1. Let, const --> OK
 // 2. Template Literals
 // 3. Multi-line String
 // 4. Arrow function
