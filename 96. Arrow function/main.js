@@ -56,7 +56,6 @@ const course = {
     }
 };
 
-
 // Arrow function không có function, 
 // nếu sử dụng arrow function trong trường hợp này sẽ lỗi
 
