@@ -22,5 +22,5 @@ var course = 'Javascript';
 
 const html = highlight`Học lập trình ${course} tại ${brand}!`;
 
-console.log(html)
+console.log(html);
 
